@@ -8,20 +8,20 @@ This project analyzes temporary market impact and optimal execution scheduling u
 
 ## Repository Structure
 
+```
 root/
-├── data/ # (Download data folders from GDrive)
-│ ├── SOUN/ # Raw CSV data for ticker SOUN
-│ ├── FROG/ # Raw CSV data for ticker FROG
-│ └── CRWV/ # Raw CSV data for ticker CRWV
-├── notebooks/ # Jupyter notebooks for analysis
-│ ├── Q1.ipynb # Temporary impact modeling and parameter estimation
-│ ├── Q2.ipynb # Optimal execution schedule computation and visualization
-│ ├── Q1_Explanation.pdf # Written explanation and analysis for Question 1
-│ ├── Q2_Explanation.pdf # Written explanation and mathematical formulation for Question 2
-│ └── (other notebooks or scripts as needed)
-│ └── alpha_series.pkl # Saved rolling impact parameter time series (from Q1)
-├── README.md # This file
-
+├── data/                        # (Download data folders from GDrive)
+│   ├── SOUN/                    # Raw CSV data for ticker SOUN
+│   ├── FROG/                    # Raw CSV data for ticker FROG
+│   └── CRWV/                    # Raw CSV data for ticker CRWV
+├── notebooks/                   # Jupyter notebooks for analysis
+│   ├── Q1.ipynb                 # Temporary impact modeling and parameter estimation
+│   ├── Q2.ipynb                 # Optimal execution schedule computation and visualization
+│   ├── Q1_Explanation.pdf       # Written explanation and analysis for Question 1
+│   ├── Q2_Explanation.pdf       # Written explanation and mathematical formulation for Question 2
+│   └── alpha_series.pkl         # Saved rolling impact parameter time series (from Q1)
+├── README.md                    # This file
+```
 
 ---
 
@@ -41,8 +41,9 @@ root/
 - Use **Jupyter Notebooks** to run the analysis.
 - Install dependencies by running this in a notebook cell or terminal:
 
+```python
 !pip install pandas numpy matplotlib seaborn statsmodels
-
+```
 
 ---
 
@@ -50,14 +51,14 @@ root/
 
 1. Download and prepare the data folder as above.
 2. Open `notebooks/Q1.ipynb` and run all cells. This notebook:
- - Loads and preprocesses the data.
- - Estimates the time-varying temporary impact parameter ($\alpha_t$).
- - Saves the `alpha_series.pkl` file into the `outputs/` directory.
+   - Loads and preprocesses the data.
+   - Estimates the time-varying temporary impact parameter ($\alpha_t$).
+   - Saves the `alpha_series.pkl` file into the `outputs/` directory.
 3. Review the written report for Question 1 in `notebooks/Q1_Explanation.pdf`.
 4. Open `notebooks/Q2.ipynb` and run all cells. This notebook:
- - Loads the saved `alpha_series.pkl` from the `outputs/` directory.
- - Computes the optimal execution schedule for a specified metaorder size.
- - Visualizes trade schedule and cumulative execution.
+   - Loads the saved `alpha_series.pkl` from the `outputs/` directory.
+   - Computes the optimal execution schedule for a specified metaorder size.
+   - Visualizes trade schedule and cumulative execution.
 5. Review the written report for Question 2 in `notebooks/Q2_Explanation.pdf`.
 
 ---
